@@ -28,7 +28,7 @@ nav {
     text-decoration: none;
     color: #555;
     font-size: 18px;
-    padding: 5x 10px;
+    padding: 5px 10px;
 
 
 }
@@ -40,9 +40,9 @@ nav button {
     border-radius: 50px;
     background-color: aqua;
     color: azure;
-    box-sizing: 0 2px 15px #15e986;
+    box-shadow: 0 2px 15px #15e986;
     cursor: pointer;
-    transform: 0.75;
+    transition: 0.7s;
 }
 
 nav button:hover {
@@ -50,3 +50,77 @@ nav button:hover {
     transform: scale(1.1);
 }
 
+.hero {
+    padding: 20px 10%;
+    display: flex;
+}
+
+.hero :is(figure, .cta) {
+    flex: 1;
+}
+
+.hero figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.hero figure .image {
+    background-color: black;
+    width: 200px;
+    height: 200pxp;
+    position: relative;
+    justify-self: end;
+
+}
+
+.hero figure .image:hover {
+    animation: pulse .5s infinite alternate;
+
+}
+.hero figure .image:nth-child(2) {
+top:-20px;
+justify-self: start;
+}
+
+.hero figure .image:nth-child(4) {
+    top: -20px;
+    justify-self: start;
+}
+
+.hero .cta h1 { 
+    font-size: 4rem;
+    color: #202020;
+
+
+}
+
+.hero .cta h1 span { 
+    background-color: #ffc400;
+    padding: 5px;
+}
+
+.hero .cta p { 
+    padding: 20px 0px;
+    font-size: 22px;
+    color: #5555;
+}
+
+.hero .cta button { 
+    padding: 15px 30px;
+    background-color: #15e986;
+    color: aliceblue;
+    box-shadow: 0 2px 15 px #15e986;
+    border: none;
+
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+}
